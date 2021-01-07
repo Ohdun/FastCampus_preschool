@@ -1,4 +1,200 @@
-span{
-    font-weight: bold;
-    color: blue;
+header {
+  display:grid;
+  grid-template-columns:24px 400px 1fr 84px 24px;
+  grid-template-areas: 
+  "left-space logo nav account right-space";
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 64px;
+  line-height: 64px;
+  background-color: #FF4500;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5); 
+ }
+header .logo {
+  grid-area: logo;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
 }
+header nav {
+  grid-area: nav;
+}
+header nav li {
+  display: inline-block;
+  margin-right: 36px;
+}
+header nav li.on {
+  border-bottom: 4px solid white;
+  height: 60px; 
+}
+header nav li a{
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+header .account {
+  grid-area: account;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+header nav li a:hover,
+header .account:hover{ 
+  opacity: 0.5;
+}
+main {
+  position: relative;
+  padding: 64px 0 0 240px;
+}
+main .aside {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  background-color: rgba(0,0,0,0.1);
+  border-right: 1px solid #d3d3d3;
+}
+main .aside .option-title {
+  padding: 32px 0 0 32px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: grey;
+}
+main .aside ul {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin: 32px 0;
+}
+main .aside ul li {
+  padding: 8px 34px;
+  cursor: pointer;
+}
+main .aside ul li.on {
+  background-color: #ddd;
+  color: grey;
+}
+main .aside ul li:hover {
+  color: white;
+  background-color: #444; 
+}
+main section.intro {
+  padding: 96px 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 1.7em;
+  line-height: 1.5em;
+}
+main section.intro h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+main section.gallery {
+  min-height: calc(100vh - 196px);
+  background-color: #fafafa;
+  padding: 16px;
+ }
+main section.gallery article {
+  display: inline-block;
+  margin: 8px;
+  padding: 24px;
+  border: 1px solid #fff; 
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+main section.gallery article:hover {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.33);
+}
+main section.gallery article .photo {
+  width: 440px;
+  height: 320px;
+  border-radius: 4px;
+  background-size: cover;
+}
+main section.gallery article .info {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 32px auto;
+  grid-template-areas: 
+    'like name'
+    'like description';
+  margin-top: 16px;
+  font-size: 1.2rem;
+}
+main section.gallery article .info .like {
+  grid-area: like;
+  text-align: center;
+  font-size: 2.4em;
+  background-image: url("img/heartoff.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+main section.gallery article .info .like:hover {
+  opacity: 0.5;
+}
+main section.gallery article .info .like.on {
+  background-image: url("img/hearton.png");
+}
+main section.gallery article .info .name {
+  grid-area: name;
+  font-weight: bold;
+  line-height: 32px;
+}
+main section.gallery article .info .description {
+  grid-area: description;
+  padding: 4px;
+  color: grey;
+}
+
+#photo-1 { background-image:url("img/photo1.jpg"); }
+#photo-2 { background-image:url("img/photo2.jpg"); }
+#photo-3 { background-image:url("img/photo3.jpg"); }
+#photo-4 { background-image:url("img/photo4.jpg"); }
+#photo-5 { background-image:url("img/photo5.jpg"); }
+
+main .write {
+  position: fixed;
+  display: inline-block;
+  right: 36px;
+  bottom: 36px;
+  padding: 45px;
+  z-index: 3;
+  background-color:  #FF4500;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  border-radius: 50%;
+  background-image: url("img/camera.png");
+  background-size: 50px 50px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+main .write:hover {
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+footer {
+  position: relative;
+  padding: 64px 0;
+  background-color: #383838;
+  z-index: 2;
+  font-size: 1.2rem;
+  text-align: center;
+}
+footer ul li {
+  display: inline-block;
+  padding: 0px 48px;
+}
+footer ul li:not(:last-child) {
+  border-right: 1px solid grey;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+ footer ul li a:hover {
+  color: grey;
+ }
