@@ -1,0 +1,27 @@
+main div.content {
+    position: relative;
+    width: 900px;
+    height: 250px;
+    background-color: pink;
+}
+div.photo {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 45px;
+    left: 45px;
+    border-radius: 50%;
+    background-image: url("https://image.news1.kr/system/photos/2019/12/4/3949024/article.jpg/dims/optimize");
+    background-size: 160px 160px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+}
+ul.intro {
+    position: absolute;
+    top: 30px;
+    left: 22%;
+    list-style: none;
+    font-size: 26px;
+    font-weight: bold;
+}
