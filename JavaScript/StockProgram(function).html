@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식종목 배정 프로그램</title>
+    <script src="StockProgram-script.js"></script>
+    <style>
+        body { padding: 8px 24px; }
+        table { width: 700px; }
+        td { border: 1px solid black;
+             padding: 30px; 
+             font-weight: bold;
+             color: pink;
+             background-color: rgba(0,0,0,0.5);
+             text-align: center;
+            }
+        button { font-size: 1rem; }
+        caption { font-size: 40px;
+                  font-weight: bold;}
+        ul { list-style: none; 
+             padding: 0;}
+       
+
+    </style>
+</head>
+<body onload ="showNotAssignedStocks()">
+    
+    <table>
+        <caption>주식 종목 프로그램</caption>
+        <tr>
+            <td colspan="4" id="Not_assigned"></td>
+        </tr>
+        <tr>
+            <td>물린종목</td>
+            <td>관심종목</td>
+            <td>익절종목<br>
+                (1.0~35%)</td>
+            <td>손절종목<br>
+                (0.0~1.5%)</td>
+        </tr>
+        <tr>
+           <td>
+              <button onclick="assignStockToList(1)">배정</button>
+              <ul id="list_1"></ul>
+           </td>
+           <td>
+              <button onclick="assignStockToList(2)">배정</button>
+              <ul id="list_2"></ul>
+         </td>
+         <td>
+              <button onclick="assignStockToList(3)">배정</button>
+              <ul id ="list_3"></ul>
+         </td>
+         <td>
+              <button onclick="assignStockToList(4)">배정</button>
+              <ul id="list_4"></ul>
+         </td>
+         
+           
+    </table>
+</body>
+</html>
